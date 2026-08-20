@@ -1,0 +1,45 @@
+name: vexon
+description: Vexon - AI Fitness App for Men, coached by Nox.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Local key-value persistence (profile, streak, logs, chat history)
+  shared_preferences: ^2.2.2
+
+  # Gemini API calls (Nox chat + workout generator)
+  http: ^1.2.1
+
+  # Real scheduled/local push notifications (workout reminders)
+  flutter_local_notifications: ^17.2.2
+  timezone: ^0.9.4
+
+  # Analytics dashboard charts (Progress screen)
+  fl_chart: ^0.68.0
+
+  # Workout scheduling calendar
+  table_calendar: ^3.1.2
+
+  # Typography (Poppins / Inter)
+  google_fonts: ^6.2.1
+
+  # Loads GEMINI_API_KEY / MODEL_NAME from .env at runtime
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - public/assets/LOGO.webp
