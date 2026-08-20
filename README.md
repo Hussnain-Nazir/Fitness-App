@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Vexon</h1>
-<p align="center">A premium, men-focused AI fitness app for Flutter, coached by <b>Nox</b>.</p>
+<p align="center">A premium, AI fitness app for Flutter, coached by <b>Nox</b>.</p>
 
 ---
 
