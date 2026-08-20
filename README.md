@@ -85,59 +85,62 @@ only when you talk to Nox or generate a workout plan.
 | Typography | `google_fonts` (Poppins / Inter) |
 | Local notifications | `flutter_local_notifications`, `timezone` |
 
-## Project structure
+## Folder structure
 
 ```
-lib/
-  main.dart                        # Entry point: loads .env, notifications, daily rollover
-  theme/
-    app_colors.dart                # Brand palette (primary blue + dark background)
-    app_text_styles.dart           # Poppins / Inter type scale
-    app_theme.dart                 # Global ThemeData
-  models/
-    workout.dart                   # Workout model + seed catalog (category, difficulty)
-    meal.dart                      # Meal model + seed plan + protein suggestions
-    chat_message.dart              # Nox chat message model
-    user_profile.dart              # Onboarding data: age, height, weight, goal, experience
-    achievement.dart                # Badge definitions and unlock predicates
-  services/
-    auth_service.dart              # Signup / login
-    storage_service.dart           # All local persistence - single source of truth
-    notification_service.dart      # Local notification scheduling
-    gemini_service.dart            # Gemini API integration for Nox + workout generator
-    tab_navigation.dart            # Shared signal for switching HomeShell tabs
-  widgets/
-    app_logo.dart
-    primary_button.dart
-    vexon_card.dart                # Light card surface + dark card variant
-    stat_card.dart
-    section_header.dart
-    error_feedback.dart
-    empty_state.dart                # Icon + message + CTA for screens with no data
-    achievement_badge.dart          # Badge strip (Home) and full list (Profile)
-    animated_progress.dart          # Tweened linear/ring progress indicators
-    page_transitions.dart           # Fade + slide navigation transition
-  screens/
-    splash_screen.dart
-    onboarding_screen.dart
-    login_screen.dart
-    signup_screen.dart
-    home_shell.dart                 # Bottom nav: Home / Workouts / Progress / Nutrition / Profile
-    home_screen.dart
-    workouts_screen.dart
-    workout_detail_screen.dart
-    progress_screen.dart
-    nutrition_screen.dart
-    profile_screen.dart
-    settings_screen.dart
-    nox_chat_screen.dart
-    workout_generator_screen.dart
-    calendar_screen.dart
-public/
-  assets/
-    LOGO.webp                       # App logo
-  images/                           # Empty - reserved for future image assets
-.env.example                        # Template for GEMINI_API_KEY / MODEL_NAME
+Fitness-App/
+├── lib/
+│   ├── main.dart                               # Entry point: loads .env, notifications, daily rollover
+│   ├── theme/
+│   │   ├── app_colors.dart                      # Brand palette (primary blue + dark background)
+│   │   ├── app_text_styles.dart                 # Poppins / Inter type scale
+│   │   └── app_theme.dart                       # Global ThemeData
+│   ├── models/
+│   │   ├── workout.dart                         # Workout model + seed catalog (category, difficulty)
+│   │   ├── meal.dart                            # Meal model + seed plan + protein suggestions
+│   │   ├── chat_message.dart                    # Nox chat message model
+│   │   ├── user_profile.dart                    # Onboarding data: age, height, weight, goal, experience
+│   │   └── achievement.dart                     # Badge definitions and unlock predicates
+│   ├── services/
+│   │   ├── auth_service.dart                    # Signup / login
+│   │   ├── storage_service.dart                 # All local persistence - single source of truth
+│   │   ├── notification_service.dart            # Local notification scheduling
+│   │   ├── gemini_service.dart                  # Gemini API integration for Nox + workout generator
+│   │   └── tab_navigation.dart                  # Shared signal for switching HomeShell tabs
+│   ├── widgets/
+│   │   ├── app_logo.dart
+│   │   ├── primary_button.dart
+│   │   ├── vexon_card.dart                      # Light card surface + dark card variant
+│   │   ├── stat_card.dart
+│   │   ├── section_header.dart
+│   │   ├── error_feedback.dart
+│   │   ├── empty_state.dart                     # Icon + message + CTA for screens with no data
+│   │   ├── achievement_badge.dart               # Badge strip (Home) and full list (Profile)
+│   │   ├── animated_progress.dart               # Tweened linear/ring progress indicators
+│   │   └── page_transitions.dart                # Fade + slide navigation transition
+│   └── screens/
+│       ├── splash_screen.dart
+│       ├── onboarding_screen.dart
+│       ├── login_screen.dart
+│       ├── signup_screen.dart
+│       ├── home_shell.dart                      # Bottom nav: Home / Workouts / Progress / Nutrition / Profile
+│       ├── home_screen.dart
+│       ├── workouts_screen.dart
+│       ├── workout_detail_screen.dart
+│       ├── progress_screen.dart
+│       ├── nutrition_screen.dart
+│       ├── profile_screen.dart
+│       ├── settings_screen.dart
+│       ├── nox_chat_screen.dart
+│       ├── workout_generator_screen.dart
+│       └── calendar_screen.dart
+├── public/
+│   ├── assets/
+│   │   └── LOGO.webp                    # App logo
+│   └── images/                         # Empty - reserved for future image assets
+├── .env.example                       # Template for .env
+├── pubspec.yaml
+└── README.md
 ```
 
 ## Getting started
